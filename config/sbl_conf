@@ -1,0 +1,1 @@
+{"start_with_thumb": "False", "enable_thumb": "True", "info_path": "evaluation/sbl.txt", "exit_on_dec_error": "True", "bootloader": "bootloaders/sbl", "arch": "32"}

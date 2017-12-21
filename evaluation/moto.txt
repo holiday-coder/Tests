@@ -1,0 +1,20 @@
+base_addr:
+0x8F600000
+
+# method_name, method_addr, caller_name, caller_addr, taint_addr, taint_bb_addr, arg_cnt, non_string_args_list, log_message_xref_addr, log_message_addr
+
+sources:
+mmc_read, 0x8F60D9DC, target_mmc_read, 0x8F6076A4, 0x8F6076BC, 0x8F6076A4, 3, [0, 1, 2], 0x8F6076CC, 0x8F6A088E
+generic_mmc_read_logical, 0x8F64F458, display_logo_0, 0x8F6393A0, 0x8F6397F8, 0x8F6397E4, 3, [1, 2], 0x8F639808, 0x8F6BF0FB
+generic_mmc_read_logical, 0x8F64F458, display_image, 0x8F63CE08, 0x8F63D0FC, 0x8F63D0F8, 3, [1, 2], 0x8F63D108, 0x8F6BF0FB
+
+# method_name, method_addr, arg_cnt, non_string_args_list
+
+sinks_memwrite:
+mmc_write, 0x8F60D7CC, 3, [0, 1, 2]
+
+# method_name, method_addr, arg_cnt, non_string_args_list
+
+sinks_memcpy:
+memcpy, 0x8F6495F4, 3, [0,1,2]
+strcat, 0x8F649A1C, 2, [0,1]
